@@ -6,20 +6,19 @@ function takeANumber(katzDeliLine, name){
   return `Welcome, ${name}. You are number ${placeLine} in line.`
 }
 
+
+
 function nowServing(katzDeliLine){
   if(katzDeliLine.length === 0){
     return "There is nobody waiting to be served!"
   }
 
   else {
-    var serving = katzDeliLine[0]
-
+    return `Currently serving ${katzDeliLine[0]}.`
     katzDeliLine.shift();
-    return `Currently serving ${serving}.`
+    return katzDeliLine;
   }
 }
-
-//var line = {};
 
 function currentLine(katzDeliLine){
   var line = {};
@@ -29,18 +28,14 @@ function currentLine(katzDeliLine){
   }
   else {
 
-  var line = [];
+  for (let i = 0; i <= katzDeliLine.length; ++i){
 
-  for (let i = 0; i < katzDeliLine.length; ++i){
-    line.push(i+1 + ". "+ katzDeliLine[i]);
-
-    //katzDeliLine[i] = i + 1 + ". " + katzDeliLine[i];
+    var placeLine = i + 1;
 
     // line.push(" " + i+1 + ". "+ katzDeliLine[i]);
-    //line["placeLine"] = "katzDeliLine[i]";
+    line["placeLine"] = "katzDeliLine[i]";
   }
 }
-    //return "The line is currently: " + line;
-    return "The line is currently: " + line.join(', ');
+    return "The line is currently: " + line;
 
   }
