@@ -28,14 +28,14 @@ function currentLine(katzDeliLine){
   }
   else {
 
+  var line = [];
+
   for (let i = 0; i <= katzDeliLine.length; ++i){
 
-    var placeLine = i + 1;
+    line.push(i+1 + ". "+ katzDeliLine[i]);
 
-    // line.push(" " + i+1 + ". "+ katzDeliLine[i]);
-    line["placeLine"] = "katzDeliLine[i]";
   }
 }
-    return "The line is currently: " + line;
+    return "The line is currently: " + line.join(', ');
 
   }
